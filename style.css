@@ -1,0 +1,33 @@
+#headerText {
+    text-align: center;
+    color:orange;
+}
+table, th, td{
+    
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+
+}
+table{
+    margin-left:auto;
+    margin-right:auto;
+    width: 60%
+}
+
+th,td{
+    text-align: left;
+    border: 1px solid black;
+}
+
+th{
+}
+
+#typeOfExpense{
+    width:fit-content;
+    font-size: large;
+}
+#date{
+    width: fit-content;
+    font-size:large;
+}
