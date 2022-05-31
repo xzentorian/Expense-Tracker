@@ -9,24 +9,50 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <table class="inputTable">
+    <table id="inputTable">
         <h1 id="headerText">Add a new expense item:</h1>
         <tr>
-            
-            <td colspan="3"><form>Type of expense:<input type="text" id="typeOfExpense" placeholder="Item or place of purchase..." 
+            <td colspan="2" id="expenseTd" nowrap>
+                <form>
+                    <label for="typeOfExpense">Expense:</label>
+                    <input type="text" id="typeOfExpense" placeholder="Item or place of purchase..." 
                 name ="typeOfExpense" 
-                required minlength="1" size="54"></form></td>
+                required minlength="1">
+            </form>
+        </td>
         </tr>
         <tr>
-            <td><form>Date:<input type="text" id="date" placeholder="yy-mm-dd" 
-                name ="date" 
-                required minlength="8"size="27"></form>
-            <td><form>Amount:<input type="text" id="date" placeholder="SEK" 
-                name ="date" 
-                required minlength="1" size="27"> </form></td>
             
+            <td nowrap>
+                <form>
+                <label for="date">Date:</label>
+                <input type="date" id="datePicker">
+                    <label for="amount">Amount:</label>
+                    <input type="text" id="amount" placeholder="SEK" 
+                name ="date" 
+                required minlength="1">
+            </form>
+        </td>
         </tr>
     </table>
-    
+    <div id="expenseButtonContainer">
+    <button id="expenseButton" >Add Expense</button>
+</div>
+
+<table id="resultTable">
+    <tr>
+        <th id="th1">Expense</th>
+        <th id="th2" >Date</th>
+        <th id="th3">Amount</th>
+        <th id="th4"></th>
+    </tr>
+    <tr>
+        <td id="resTd1"> No expenses added yet...</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
 </body>
 </html

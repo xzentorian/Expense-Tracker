@@ -2,32 +2,95 @@
     text-align: center;
     color:orange;
 }
-table, th, td{
+#inputTable, th, td{
     
     font-size: x-large;
     font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
+    
 
 }
 table{
     margin-left:auto;
     margin-right:auto;
-    width: 60%
+    width: 600px; 
 }
 
-th,td{
-    text-align: left;
-    border: 1px solid black;
+#resultTable{
+    width: 800px;
+    border: 1px solid gray;
+    
+
 }
 
 th{
+    border: 1px solid gray;
+    font-size: medium;
 }
 
-#typeOfExpense{
-    width:fit-content;
-    font-size: large;
+#th1{
+width:450px;
 }
-#date{
-    width: fit-content;
-    font-size:large;
+#th2{
+    width:150px;
+}
+#th3{
+    width:150px;
+}
+#th4{
+    width:50px;
+}
+
+#resTd1{
+
+}
+
+
+
+
+
+th,td{
+    
+   /* text-align: left;
+    border: 1px solid black;*/
+}
+
+
+#typeOfExpense{
+    
+    width:682px;
+    font-size: medium;
+}
+#datePicker{
+    width: 295px;
+    font-size:medium;
+}
+
+#amount{
+    width:323px;
+    font-size:medium;
+}
+#expenseButtonContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:50px;
+}
+
+#expenseButton{
+    background-color: orange;
+    color:white;
+    border:none;
+    padding:15px 15px;
+    text-align: center;
+    display: inline-block;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 150px;
+    
+}
+
+#expenseButton:hover{
+    border: 1px solid orange;
+    background-color: white;
+    color:orange;
 }
