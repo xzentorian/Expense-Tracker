@@ -9,7 +9,53 @@ const adjStartpoint= document.querySelector("#start");
 
 
 
+let dataArray = new Array();
 
+function addData(){
+getData();
+dataArray.push({
+  expenseInput: expenseInput.value,
+  date:date.value,
+  amount:amount.value
+})
+
+localStorage.setItem("localData", JSON.stringify(dataArray));
+}
+
+
+function getData(){
+let str = localStorage.getItem("localData");
+if (str != null)
+dataArray = JSON.parse(str);
+}
+
+
+function deleteData(){
+localStorage.clear();
+}
+
+function showData(){
+    getData();
+    let expenseData = expenseInput.value;
+   let dateData = date.value;
+   let amountData = amount.value;
+
+   for (i=0; i < dataArray.length; i++){
+
+    let data = `<tr><td>${expenseData}</td>
+    <td>${dateData}</td>
+    <td>${amountData}</td><td><input type="button" value="X" class="removeButton"> </td></tr>`
+     adjStartpoint.insertAdjacentHTML("afterend", data)
+
+     // When data is added to the table, temprow.     
+    if(results.rows.length > 2){
+        tempRow.classList.add("hide");
+    }
+    addData();
+    
+}
+
+}
 
 // Add all data to the result table
 addButton.addEventListener("click", function(){
@@ -27,7 +73,8 @@ addButton.addEventListener("click", function(){
     if(results.rows.length > 2){
         tempRow.classList.add("hide");
     }
-    
+    addData();
+    console.log(dataArray);
      
 });
 
@@ -42,7 +89,6 @@ if(element.classList.contains("removeButton")){
 
 // if all data from the table is removed then show temprow again!
 if(results.rows.length < 3){
-    tempRow.classList.remove("hide")
-    console.log("low on rows");
+    tempRow.classList.remove("hide");
 }
 }
